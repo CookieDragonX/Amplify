@@ -1,0 +1,23 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+
+{% block title %}Amplify Home{% endblock %}
+
+{% block content %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home_style.css' %}">
+    <div class = 'home_text'>
+        </br>
+        </br>
+        <center><h1>Welcome to Amplify!</h1></center>
+        </br>
+        </br>
+    
+    <div class = "home_image">
+        <center><img src = '{% static "media/amp_BIG.png" %}' style="width:300px; height:300px;"></center>
+    </div>
+        </br>
+        <center><p style="font-size:26px">Listen to tracks uploaded by all users!</p></center>
+        <p style="padding-left:1000px;">by <strong>Milencovici Radoliub Vlad</strong></p>
+    </div>
+{% endblock %}

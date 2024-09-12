@@ -1,0 +1,39 @@
+.logo-image{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow:visible;
+    margin-top: -6px;
+    margin-left:20px;
+    position:fixed;
+}
+.topnav {
+    height:80px;
+    width:100%;
+    position:relative;
+    z-index:1;
+    top:0;
+    Left:0;
+    background-color:aquamarine;
+    overflow-x:hidden;
+    padding-top:20px;
+}
+.links{
+    padding-left: 120px;
+}
+.topnav a {
+    padding: 6px 8px 6px 75px;
+    text-decoration:wavy;
+    font-size: 30px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:#7b2d26;
+    display:inline-flex;
+    text-align: center;
+    text-decoration:underline ;
+}
+.topnav a:hover{
+    color:#7b2d26;
+    text-decoration:overline;
+    font-size: 30px
+}
+

@@ -1,0 +1,32 @@
+
+.button_song {
+    background-color: #4CAF50; 
+    margin-left: 250px;
+    margin-top:50px;
+    text-shadow:#2c5d2d ;
+    color:white;
+
+    border:crimson;
+    width: 1000px;
+    height: 200px;
+    padding: 15px 32px;
+    align-self: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 75px;
+  }
+
+.button_song:hover{
+  color:darksalmon;
+  text-decoration: solid;
+  background-color:#2c5d2d ;
+}
+
+.search-button:hover{
+  background-color:#2c5d2d ;
+}
+
+p{
+  font-size:36px;
+  margin-left:25rem;
+}

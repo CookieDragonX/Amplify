@@ -1,0 +1,10 @@
+.button_song {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display:flex;
+    justify-content: center;
+    font-size: 16px;
+  }

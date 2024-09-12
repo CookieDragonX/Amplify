@@ -1,0 +1,23 @@
+{% extends 'home/base.html' %}
+{% load static %}
+{% block title %}Upload Songs{% endblock %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+    {% if user.is_authenticated %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/songs_upload_style.css' %}">
+    <form method="post" class="form-group" enctype="multipart/form-data">
+        <div class="w-50" style="margin-left:5rem; font-size:large; font-style:bold">
+            {% csrf_token %}
+            {{form|crispy}}
+         </div>
+         <button type ="submit" class="btn btn-success" style="margin-left:20rem; margin-top:1rem; width:20rem; border-radius: 10rem;">
+            <strong>Upload</strong></button>
+    </form>
+    {% else %}
+    <p style="justify-content:center; margin-top: 7rem;font-size:36px; margin-left:25rem;">Please Log in to take advantage of this feature!</p>
+    <a style="justify-content:center; margin-top: 7rem;font-size:36px; margin-left:30rem;" href = "/login">Log in here</a><br />
+    <a style="justify-content:center; margin-top: 7rem;font-size:36px; margin-left:30rem;" href = "/register">Register here</a>
+    {% endif %}
+{% endblock %}

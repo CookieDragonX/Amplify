@@ -1,0 +1,28 @@
+{% extends 'home/base.html' %}
+{% load static %}
+{% block title %}Search Songs{% endblock %}
+
+{% block content %} 
+    {% if user.is_authenticated %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/songs_search_style.css' %}">
+    <div class="search_form">
+        <form method="get" action="/songs/search_results/">
+            <div class="results_form">
+              <p style=" margin-top: 7rem;">Search songs by name or artist:</p>
+              <div class="w-50" style="margin-left:5rem; font-size:large; font-style:bold"></div>
+                <form method="get" action="/songs/search_results/">
+                    <input type="text" name="q" id="id_q" value="{{ query }}" style="margin-left:20rem; margin-top:1rem; width:20rem;" />
+                    <input type="submit" value="Search" style="margin-top:1rem; width:20rem; border-radius: 100000rem;" />
+                </form>
+                <form method="get" action="/songs/search_results/all/">
+                    <input type="submit" value="Click here for all songs" style="margin-left:29rem; margin-top:1rem; width:20rem;" />
+                </form>
+            </div>
+          </form>
+    </div>
+    {% else %}
+    <p style="justify-content:center; margin-top: 7rem;font-size:36px; margin-left:25rem;">Please Log in to take advantage of this feature!</p>
+    <a style="justify-content:center; margin-top: 7rem;font-size:36px; margin-left:30rem;" href = "/login">Log in here</a><br />
+    <a style="justify-content:center; margin-top: 7rem;font-size:36px; margin-left:30rem;" href = "/register">Register here</a>
+    {% endif %}
+{% endblock %}
